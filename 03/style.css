@@ -280,7 +280,7 @@ strong {
     }
 
     .responsive-img {
-        width: 641px;
+        width: 822px;
         height: 36rem;
         object-fit: cover;
         flex-shrink: 0;
@@ -293,6 +293,7 @@ strong {
     .texts {
         font-size: 1.2rem;
         padding: 5%;
+        position: inherit;
     }
 
     .naaaa {
