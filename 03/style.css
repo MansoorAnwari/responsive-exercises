@@ -14,9 +14,10 @@
     --hover-background: #000;
 }
 
-body {
-    background: url(/asset/photo/Frame.png);
+.all-bg {
+    background: url(asset/photo/Frame.png);
     object-fit: cover;
+    max-height: 225em;
 }
 
 /* .navbar */
@@ -97,15 +98,16 @@ strong {
     justify-content: center;
     flex-direction: row-reverse;
     gap: 1%;
-    margin: 3rem 0 3rem 0;
+    margin: 3rem 0 0 0;
 }
 
 .part-name h3 {
     font-size: 3rem;
+    padding: 3rem 0 3rem 0;
 }
 
 .responsive-img {
-    width: 1500px;
+    max-width: 100%;
     object-fit: cover;
 }
 
@@ -244,10 +246,77 @@ strong {
     opacity: 1;
 }
 
+/* footer  */
+
+.all-f {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 7%;
+    margin-bottom: 2%;
+}
+
+.call-f,
+.call-logos {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.social-logos {
+    margin-top: 2rem;
+}
+
+.call-logos {
+    display: flex;
+    align-items: start;
+    padding: auto;
+}
+
+
+.all-i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hr {
+    margin-top: 8%;
+    border: none;
+    border: 1.5px solid rgba(242, 242, 242, 1);
+}
+
+.glass-res-2 {
+    margin-top: 10rem;
+    background: url(asset/photo/glass.png);
+    height: 102em;
+}
 
 /* @media  */
 @media screen and (max-width:768px) {
 
+    .all-f {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 18%;
+        gap: 5rem;
+    }
+
+    .glass-res-2 {
+        height: 115em;
+    }
+
+    .hr {
+        margin-top: 30%;
+    }
+
+    .all-bg {
+        height: 270em;
+    }
 
     /* navbar  */
     .link-text,
@@ -261,17 +330,20 @@ strong {
         width: 80%;
     }
 
-
+    .all-bg {
+        max-height: 100%;
+        background-repeat: round;
+    }
 
     /* main */
     .main-text {
         display: flex;
         flex-direction: column;
-        height: 46rem;
+        height: 40rem;
     }
 
     .img-main {
-        width: 5rem;
+        display: none;
 
     }
 
@@ -280,10 +352,15 @@ strong {
     }
 
     .responsive-img {
-        width: 822px;
-        height: 36rem;
+        display: none;
+    }
+
+    .responsive-img2 {
+        width: 100%;
+        height: auto;
+        padding: 4%;
+        margin-top: 3rem;
         object-fit: cover;
-        flex-shrink: 0;
     }
 
     .button {
@@ -293,7 +370,8 @@ strong {
     .texts {
         font-size: 1.2rem;
         padding: 5%;
-        position: inherit;
+        position: relative;
+        top: 6%;
     }
 
     .naaaa {
@@ -336,6 +414,10 @@ strong {
         display: none;
     }
 
+    .responsive-img2 {
+        display: none;
+    }
+
     .logo {
         display: flex;
         justify-content: end;
@@ -350,20 +432,8 @@ strong {
         flex-direction: column;
     }
 
-    .img-main {
-        width: 5rem;
-
-    }
-
     strong {
         font-size: 1.2rem;
-    }
-
-    .responsive-img {
-        width: 40rem;
-        height: 36rem;
-        object-fit: cover;
-        flex-shrink: 0;
     }
 
     .button {
@@ -401,5 +471,11 @@ strong {
     .swipper-p {
         padding: 2rem;
         top: 1rem;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .responsive-img2 {
+        display: none;
     }
 }
